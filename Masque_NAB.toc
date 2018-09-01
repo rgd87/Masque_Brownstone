@@ -1,0 +1,6 @@
+## Interface: 80000
+## Title: Masque: NAB
+## Author: d87
+## Dependencies: Masque
+
+nab.lua
