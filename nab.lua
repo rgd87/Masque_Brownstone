@@ -1,113 +1,107 @@
-local MSQ = LibStub("Masque", true)
+local MSQ = LibStub and LibStub("Masque", true)
 if not MSQ then return end
 
--- Caith
-MSQ:AddSkin("NAB", {
-    Author = "d87",
-    Version = 70300,
-    Masque_Version = 70200,
-    Shape = "Square",
-    Backdrop = {
-        Width = 32,
-        Height = 32,
-        TexCoords = {0.2, 0.8, 0.2, 0.8},
+local AddOn, Core = ...
+
+----------------------------------------
+-- Locals
+---
+
+
+-- Skin Info
+local Version = GetAddOnMetadata(AddOn, "Version")
+local Websites = {
+	"https://github.com/rgd87",
+}
+
+----------------------------------------
+-- Apathy
+---
+
+MSQ:AddSkin("Nuga", {
+	Shape = "Square",
+	Masque_Version = 80300,
+
+	Description = "A skin",
+	Version = Version,
+	Author = "d87",
+	Websites = Websites,
+
+	Backdrop = {
+		TexCoords = {0.2, 0.8, 0.2, 0.8},
         Texture = [[Interface\Buttons\UI-EmptySlot]],
-    },
-    Icon = {
-        Width = 30,
-        Height = 30,
-        TexCoords = {0.07, 0.93, 0.07, 0.93},
-    },
-    Flash = {
-        Width = 30,
-        Height = 30,
-        TexCoords = {0.2, 0.8, 0.2, 0.8},
-        Texture = [[Interface\Buttons\UI-QuickslotRed]],
-    },
-    Cooldown = {
-        Width = 32,
-        Height = 32,
-    },
-    ChargeCooldown = {
-        Width = 32,
-        Height = 32,
+		Width = 40,
+		Height = 40,
     },
     Pushed = {
-        Width = 56,
-        Height = 56,
-        -- OffsetX = -15,
-        -- OffsetY = 15,
-        Texture = [[Interface\AddOns\Masque_NAB\Textures\tPushed]],
-    },
-    Normal = {
-        Width = 56,
-        Height = 56,
-        OffsetX = 0.5,
-        OffsetY = -0.5,
-        Texture = [[Interface\AddOns\Masque_NAB\Textures\tNormal]],
+		Texture = "Interface\\AddOns\\Masque_NAB\\Textures\\tPushed3",
+		Width = 40,
+        Height = 40,
+        -- BlendMode = "ADD",
+		DrawLayer = "ARTWORK",
+		DrawLevel = 3,
+	},
+	Normal = {
+		Texture = "Interface\\AddOns\\Masque_NAB\\Textures\\tNormal3",
+		Width = 40,
+        Height = 40,
+        DrawLayer = "ARTWORK",
+        DrawLevel = 0,
         EmptyTexture = [[Interface\Buttons\UI-Quickslot]],
         EmptyColor = {1, 1, 1, 0.5},
-    },
-    Disabled = {
-        Hide = true,
-    },
-    Checked = {
-        Width = 31,
-        Height = 31,
+	},
+	Checked = {
+		Texture = "Interface\\AddOns\\Masque_NAB\\Textures\\tChecked",
+		Width = 33,
+        Height = 33,
         BlendMode = "ADD",
-        Texture = [[Interface\AddOns\Masque_NAB\Textures\tChecked]],
-    },
-    Border = {
-        Hide = true,
-        Width = 60,
-        Height = 60,
-        OffsetX = 0.5,
-        OffsetY = 0.5,
+		-- Color = { 1, 246/255, 0, 0.9 },
+	},
+	Highlight = {
+		Texture = "Interface\\AddOns\\Masque_NAB\\Textures\\tHighlighted",
+		Width = 33,
+        Height = 33,
         BlendMode = "ADD",
-        Texture = [[Interface\Buttons\UI-ActionButton-Border]],
-    },
-    Gloss = {
-        Hide = true,
-    },
-    AutoCastable = {
-        Width = 56,
-        Height = 56,
-        OffsetX = 0.5,
-        OffsetY = -0.5,
-        Texture = [[Interface\Buttons\UI-AutoCastableOverlay]],
-    },
-    Highlight = {
-        Width = 30,
-        Height = 30,
-        BlendMode = "ADD",
-        Texture = [[Interface\AddOns\Masque_NAB\Textures\tHighlighted]],
-    },
-    Name = {
-        Width = 32,
-        Height = 10,
-        OffsetY = 6,
-    },
-    Count = {
-        Width = 32,
-        Height = 10,
-        OffsetX = -3,
-        OffsetY = 6,
-    },
-    HotKey = {
-        Width = 32,
-        Height = 10,
-        OffsetX = 1,
-        OffsetY = -6,
-    },
-    Duration = {
-        Width = 36,
-        Height = 10,
-        OffsetY = -2,
-    },
-    Shine = {
-        Width = 32,
-        Height = 32,
-        OffsetX = 0.5,
-        OffsetY = -0.5
+		-- Color = { 0, 144/255, 1, 0.9 },
+	},
+	-- Border = {
+    --     Hide = true,
+    --     Width = 60,
+    --     Height = 60,
+    --     OffsetX = 0.5,
+    --     OffsetY = 0.5,
+    --     BlendMode = "ADD",
+    --     Texture = [[Interface\Buttons\UI-ActionButton-Border]],
+    -- },
+	Icon = {
+		-- TexCoords = { 0.05, 0.95, 0.05, 0.95 },
+		Width = 35,
+		Height = 35,
+	},
+	Cooldown = {
+		Width = 31,
+		Height = 31,
+		OffsetX = 0,
+        OffsetY = 0,
+        DrawLayer = "ARTWORK",
+		DrawLevel = -3,
+	},
+	Count = { -- anchor BOTTOMRIGHT
+	--	Width = 36,b
+		JustifyV = "BOTTOM",
+	},
+	Name = { -- anchor BOTTOM
+		Width = 51,
+		JustifyV = "BOTTOM",
+	},
+	HotKey = { -- anchor TOPLEFT
+		Width = 34,
+		OffsetX = 1,
+		OffsetY = -3,
+		JustifyH = "RIGHT",
+		JustifyV = "TOP",
+	},
+	Gloss = {
+		Hide = true,
     },
 })

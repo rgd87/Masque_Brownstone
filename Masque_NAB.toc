@@ -1,6 +1,7 @@
-## Interface: 80000
+## Interface: 80300
 ## Title: Masque: NAB
 ## Author: d87
+## Version: 2.0
 ## Dependencies: Masque
 
 nab.lua
