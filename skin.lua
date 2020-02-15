@@ -80,7 +80,7 @@ MSQ:AddSkin("Brownstone", {
 	},
 	Cooldown = {
 		Width = 33,
-		Height = 33,
+		Height = 32,
 		OffsetX = 0,
         OffsetY = 0,
         DrawLayer = "ARTWORK",
