@@ -11,16 +11,16 @@ local AddOn, Core = ...
 -- Skin Info
 local Version = GetAddOnMetadata(AddOn, "Version")
 local Websites = {
-	"https://github.com/rgd87",
+	"https://github.com/rgd87/Masque_Brownstone",
 }
 
 ----------------------------------------
 -- Apathy
 ---
 
-MSQ:AddSkin("Nuga", {
+MSQ:AddSkin("Brownstone", {
 	Shape = "Square",
-	Masque_Version = 80300,
+	-- Masque_Version = 80300,
 
 	Description = "A skin",
 	Version = Version,
@@ -34,7 +34,7 @@ MSQ:AddSkin("Nuga", {
 		Height = 40,
     },
     Pushed = {
-		Texture = "Interface\\AddOns\\Masque_NAB\\Textures\\tPushed3",
+		Texture = "Interface\\AddOns\\Masque_Brownstone\\Textures\\tPushed3",
 		Width = 40,
         Height = 40,
         -- BlendMode = "ADD",
@@ -42,7 +42,7 @@ MSQ:AddSkin("Nuga", {
 		DrawLevel = 3,
 	},
 	Normal = {
-		Texture = "Interface\\AddOns\\Masque_NAB\\Textures\\tNormal3",
+		Texture = "Interface\\AddOns\\Masque_Brownstone\\Textures\\tNormal3",
 		Width = 40,
         Height = 40,
         DrawLayer = "ARTWORK",
@@ -51,14 +51,14 @@ MSQ:AddSkin("Nuga", {
         EmptyColor = {1, 1, 1, 0.5},
 	},
 	Checked = {
-		Texture = "Interface\\AddOns\\Masque_NAB\\Textures\\tChecked",
+		Texture = "Interface\\AddOns\\Masque_Brownstone\\Textures\\tChecked",
 		Width = 33,
         Height = 33,
         BlendMode = "ADD",
 		-- Color = { 1, 246/255, 0, 0.9 },
 	},
 	Highlight = {
-		Texture = "Interface\\AddOns\\Masque_NAB\\Textures\\tHighlighted",
+		Texture = "Interface\\AddOns\\Masque_Brownstone\\Textures\\tHighlighted",
 		Width = 33,
         Height = 33,
         BlendMode = "ADD",
@@ -79,12 +79,13 @@ MSQ:AddSkin("Nuga", {
 		Height = 36,
 	},
 	Cooldown = {
-		Width = 31,
-		Height = 31,
+		Width = 33,
+		Height = 33,
 		OffsetX = 0,
         OffsetY = 0,
         DrawLayer = "ARTWORK",
 		DrawLevel = -3,
+		Texture = "Interface\\AddOns\\Masque_Brownstone\\Textures\\SoftSwipe",
 	},
 	Count = { -- anchor BOTTOMRIGHT
 	--	Width = 36,b
