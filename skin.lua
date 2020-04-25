@@ -14,18 +14,15 @@ local Websites = {
 	"https://github.com/rgd87/Masque_Brownstone",
 }
 
-----------------------------------------
--- Apathy
----
 
 MSQ:AddSkin("Brownstone", {
 	Shape = "Square",
-	-- Masque_Version = 80300,
-
-	Description = "A skin",
+	Masque_Version = 80300,
+	Description = "This is a skin",
 	Version = Version,
 	Author = "d87",
-	Websites = Websites,
+    Websites = Websites,
+    Template = "Blizzard",
 
 	Backdrop = {
 		TexCoords = {0.2, 0.8, 0.2, 0.8},
@@ -47,8 +44,6 @@ MSQ:AddSkin("Brownstone", {
         Height = 40,
         DrawLayer = "ARTWORK",
         DrawLevel = 0,
-        EmptyTexture = [[Interface\Buttons\UI-Quickslot]],
-        EmptyColor = {1, 1, 1, 0.5},
 	},
 	Checked = {
 		Texture = "Interface\\AddOns\\Masque_Brownstone\\Textures\\tChecked",
